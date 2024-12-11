@@ -1,0 +1,8 @@
+2024-12-10:
+  {'time': '10:57:35 PM', 'amount': '2', 'unit': 'Fl Oz'}
+  {'time': '11:01:33 PM', 'amount': '3', 'unit': 'Fl Oz'}
+  {'time': '11:01:48 PM', 'amount': '2', 'unit': 'Fl Oz'}
+2024-12-02:
+  {'time': '10:58:11 PM', 'amount': '23', 'unit': 'Fl Oz'}
+2024-12-03:
+  {'time': '10:58:26 PM', 'amount': '2', 'unit': 'Fl Oz'}

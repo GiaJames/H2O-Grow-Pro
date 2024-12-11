@@ -1,0 +1,20 @@
+// {type:class}
+// {direction:topDown}
+// Classes
+[WaterLog| id:int;volume:float; unit:string; timestamp: datetime| convert_to(unit:string):float; edit(volume: float, unit: string, timestamp: datetime)]
+
+[WaterLogManager|logs:List<WaterLog>;daily_goal: float|add_log(volume: float, unit: string): void;delete_log(log_id: int): void;edit_log(log_id: int, volume: float, unit: string, timestamp: datetime): void;get_total_intake(unit: string): float;reset_daily_logs(): void]
+
+[PlantGrowth|growth_percentage: float;growth_frames: List<string>;messages: List<string>|update_growth(total: float, goal: float): void;get_current_frame(): string;get_growth_message(): string]
+
+[ChartManager|logs: List<WaterLog>;timeframe: string|generate_chart(timeframe: string): void;filter_logs_by_timeframe(timeframe: string): List<WaterLog>;aggregate_data(timeframe: string): Dict]
+
+[WaterLogManager]<>-[WaterLog]
+[ChartManager]<>-[WaterLog]
+[PlantGrowth]<>-[WaterLogManager]
+[ChartManager]<>-[WaterLogManager]
+
+// Relationships
+[PlantGrowth]-[WaterLogManager]
+[ChartManager]-[WaterLogManager]
+[ChartManager]-[WaterLog]
